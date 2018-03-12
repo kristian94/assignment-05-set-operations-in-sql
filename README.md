@@ -5,54 +5,54 @@
 *The union of all the tracks with genreid 18 and 20*
 
 ```sql
-(SELECT "TrackId" FROM public."Track" where "GenreId" = 18)
+(SELECT "TrackId", "Name", "GenreId" FROM public."Track" where "GenreId" = 18)
 union
-(SELECT "TrackId" FROM public."Track" where "GenreId" = 20)
+(SELECT "TrackId", "Name", "GenreId" FROM public."Track" where "GenreId" = 20)
 ```
 
 #### Results:
 
-| "TrackId" | "Name"                                               | "AlbumId" | "MediaTypeId" | "GenreId" | "Composer" | "Milliseconds" | "Bytes" | "UnitPrice" | 
-|-----------|------------------------------------------------------|-----------|---------------|-----------|------------|----------------|---------|-------------| 
-| 3248      | "Take the Celestra",253,3,20,""                      | 2927677   | 512381289     | "1.99"    |            |                |         |             | 
-| 3243      | "Murder On the Rising Star",253,3,20,""              | 2935894   | 551759986     | "1.99"    |            |                |         |             | 
-| 3238      | "The Living Legend, Pt. 2",253,3,20,""               | 2923298   | 515632754     | "1.99"    |            |                |         |             | 
-| 3230      | "Lost Planet of the Gods, Pt. 2",253,3,20,""         | 2914664   | 534343985     | "1.99"    |            |                |         |             | 
-| 3249      | "The Hand of God",253,3,20,""                        | 2924007   | 536583079     | "1.99"    |            |                |         |             | 
-| 3226      | "Battlestar Galactica, Pt. 1",253,3,20,""            | 2952702   | 541359437     | "1.99"    |            |                |         |             | 
-| 3242      | "The Man With Nine Lives",253,3,20,""                | 2956998   | 577829804     | "1.99"    |            |                |         |             | 
-| 2837      | "Crossroads, Pt. 1",227,3,20,""                      | 2622622   | 486233524     | "1.99"    |            |                |         |             | 
-| 2827      | "Unfinished Business",227,3,18,""                    | 2622038   | 528499160     | "1.99"    |            |                |         |             | 
-| 2836      | "The Son Also Rises",227,3,18,""                     | 2621830   | 499258498     | "1.99"    |            |                |         |             | 
-| 2831      | "Taking a Break from All Your Worries",227,3,18,""   | 2624207   | 492700163     | "1.99"    |            |                |         |             | 
-| 3228      | "Battlestar Galactica, Pt. 3",253,3,20,""            | 2927802   | 554509033     | "1.99"    |            |                |         |             | 
-| 3227      | "Battlestar Galactica, Pt. 2",253,3,20,""            | 2956081   | 521387924     | "1.99"    |            |                |         |             | 
-| 3239      | "Fire In Space",253,3,20,""                          | 2926593   | 536784757     | "1.99"    |            |                |         |             | 
-| 2838      | "Crossroads, Pt. 2",227,3,20,""                      | 2869953   | 497335706     | "1.99"    |            |                |         |             | 
-| 2834      | "Dirty Hands",227,3,18,""                            | 2627961   | 537648614     | "1.99"    |            |                |         |             | 
-| 2825      | "A Measure of Salvation",227,3,18,""                 | 2563938   | 489715554     | "1.99"    |            |                |         |             | 
-| 3244      | "Greetings from Earth, Pt. 1",253,3,20,""            | 2960293   | 536824558     | "1.99"    |            |                |         |             | 
-| 3234      | "The Gun On Ice Planet Zero, Pt. 2",253,3,20,""      | 2924341   | 546542281     | "1.99"    |            |                |         |             | 
-| 3241      | "War of the Gods, Pt. 2",253,3,20,""                 | 2923381   | 487899692     | "1.99"    |            |                |         |             | 
-| 3245      | "Greetings from Earth, Pt. 2",253,3,20,""            | 2903778   | 527842860     | "1.99"    |            |                |         |             | 
-| 3235      | "The Magnificent Warriors",253,3,20,""               | 2924716   | 570152232     | "1.99"    |            |                |         |             | 
-| 3231      | "The Lost Warrior",253,3,20,""                       | 2920045   | 558872190     | "1.99"    |            |                |         |             | 
-| 3247      | "Experiment In Terra",253,3,20,""                    | 2923548   | 547982556     | "1.99"    |            |                |         |             | 
-| 3246      | "Baltar's Escape",253,3,20,""                        | 2922088   | 525564224     | "1.99"    |            |                |         |             | 
-| 2833      | "A Day In the Life",227,3,18,""                      | 2620245   | 462818231     | "1.99"    |            |                |         |             | 
-| 2829      | "The Eye of Jupiter",227,3,18,""                     | 2618750   | 517909587     | "1.99"    |            |                |         |             | 
-| 2828      | "The Passage",227,3,18,""                            | 2623875   | 490375760     | "1.99"    |            |                |         |             | 
-| 3233      | "The Gun On Ice Planet Zero, Pt. 1",253,3,20,""      | 2907615   | 540980196     | "1.99"    |            |                |         |             | 
-| 3232      | "The Long Patrol",253,3,20,""                        | 2925008   | 513122217     | "1.99"    |            |                |         |             | 
-| 2819      | "Battlestar Galactica: The Story So Far",226,3,18,"" | 2622250   | 490750393     | "1.99"    |            |                |         |             | 
-| 3229      | "Lost Planet of the Gods, Pt. 1",253,3,20,""         | 2922547   | 537812711     | "1.99"    |            |                |         |             | 
-| 2830      | "Rapture",227,3,18,""                                | 2624541   | 508406153     | "1.99"    |            |                |         |             | 
-| 2826      | "Hero",227,3,18,""                                   | 2713755   | 506896959     | "1.99"    |            |                |         |             | 
-| 2835      | "Maelstrom",227,3,18,""                              | 2622372   | 514154275     | "1.99"    |            |                |         |             | 
-| 2832      | "The Woman King",227,3,18,""                         | 2626376   | 552893447     | "1.99"    |            |                |         |             | 
-| 3236      | "The Young Lords",253,3,20,""                        | 2863571   | 587051735     | "1.99"    |            |                |         |             | 
-| 3240      | "War of the Gods, Pt. 1",253,3,20,""                 | 2922630   | 505761343     | "1.99"    |            |                |         |             | 
-| 3237      | "The Living Legend, Pt. 1",253,3,20,""               | 2924507   | 503641007     | "1.99"    |            |                |         |             | 
+| "TrackId" | "Name"                                   | "GenreId" | 
+|-----------|------------------------------------------|-----------| 
+| 3243      | "Murder On the Rising Star"              | 20        | 
+| 3232      | "The Long Patrol"                        | 20        | 
+| 3246      | "Baltar's Escape"                        | 20        | 
+| 3248      | "Take the Celestra"                      | 20        | 
+| 2837      | "Crossroads, Pt. 1"                      | 20        | 
+| 3236      | "The Young Lords"                        | 20        | 
+| 3230      | "Lost Planet of the Gods, Pt. 2"         | 20        | 
+| 2825      | "A Measure of Salvation"                 | 18        | 
+| 3228      | "Battlestar Galactica, Pt. 3"            | 20        | 
+| 3238      | "The Living Legend, Pt. 2"               | 20        | 
+| 3237      | "The Living Legend, Pt. 1"               | 20        | 
+| 3231      | "The Lost Warrior"                       | 20        | 
+| 3244      | "Greetings from Earth, Pt. 1"            | 20        | 
+| 3242      | "The Man With Nine Lives"                | 20        | 
+| 2828      | "The Passage"                            | 18        | 
+| 3226      | "Battlestar Galactica, Pt. 1"            | 20        | 
+| 2836      | "The Son Also Rises"                     | 18        | 
+| 3245      | "Greetings from Earth, Pt. 2"            | 20        | 
+| 2832      | "The Woman King"                         | 18        | 
+| 2819      | "Battlestar Galactica: The Story So Far" | 18        | 
+| 3249      | "The Hand of God"                        | 20        | 
+| 2831      | "Taking a Break from All Your Worries"   | 18        | 
+| 2838      | "Crossroads, Pt. 2"                      | 20        | 
+| 2826      | "Hero"                                   | 18        | 
+| 2830      | "Rapture"                                | 18        | 
+| 3247      | "Experiment In Terra"                    | 20        | 
+| 2829      | "The Eye of Jupiter"                     | 18        | 
+| 2835      | "Maelstrom"                              | 18        | 
+| 2834      | "Dirty Hands"                            | 18        | 
+| 3240      | "War of the Gods, Pt. 1"                 | 20        | 
+| 3233      | "The Gun On Ice Planet Zero, Pt. 1"      | 20        | 
+| 2827      | "Unfinished Business"                    | 18        | 
+| 3239      | "Fire In Space"                          | 20        | 
+| 3229      | "Lost Planet of the Gods, Pt. 1"         | 20        | 
+| 3234      | "The Gun On Ice Planet Zero, Pt. 2"      | 20        | 
+| 3235      | "The Magnificent Warriors"               | 20        | 
+| 3227      | "Battlestar Galactica, Pt. 2"            | 20        | 
+| 2833      | "A Day In the Life"                      | 18        | 
+| 3241      | "War of the Gods, Pt. 2"                 | 20        | 
 
 
 ## Query #2
